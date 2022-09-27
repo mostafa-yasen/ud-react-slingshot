@@ -57,18 +57,12 @@ jobs:
 
 
 workflows:
-  build:
+  default:
     jobs:
       - build
-  
-  test:
-    jobs:
       - test:
           requires:
-           - build
-
-  analyze:
-    jobs:
+            - build
       - analyze:
           requires:
             - test
