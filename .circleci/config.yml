@@ -64,9 +64,11 @@ workflows:
   test:
     jobs:
       - test:
-          requires: build
+          requires:
+           - build
 
   analyze:
     jobs:
       - analyze:
-          requires: test
+          requires:
+            - test
